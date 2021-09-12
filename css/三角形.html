@@ -1,0 +1,72 @@
+
+<a href="https://www.cnblogs.com/chengxs/p/11406278.html">
+<div>
+    <div class='div1'><div>
+<div class='div2'><div>
+<div class='div3'><div>
+    <div class='div4'><div>
+
+    <div class='div5'><div>
+</div>
+<style>
+    /*就是利用盒子模型特性画的,用的正下面的那块儿*/
+ .div1{
+    width: 0;
+    height: 0; /*wide一定要是0，height可以随便不会影响最后成形*/
+
+    /*background-color: green;用来调的，三角画出来则删掉*/
+    border-left: 50px solid transparent; /*一个元素在另一个元素上面，但是想显示下面的元素，把上面元素的background设置为此*/
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    
+}
+
+.div2{
+    width: 0;
+    height: 0; 
+
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent;
+    border-top: 100px solid green;
+}
+
+.div3{
+    width: 0;
+    height: 0;
+
+    border-left: 100px solid orange; 
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+.div4{
+    width: 0;
+    height: 0; 
+
+    border-right: 100px solid pink; 
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+/*直角三角形*/
+.div5{
+    width: 0;
+    height: 0;
+
+    border-bottom: 100px solid red;
+    border-left: 100px solid transparent;
+
+}
+</style>
+
+她这个就是一个正方形分成四个三角形,除了一个变其他全是trasnparent
+.clear {
+    width: 0;
+    height: 0;
+    border-top: 40px solid green;
+    border-left: 40px solid black;
+    border-right: 40px solid orange;
+    border-bottom: 40px solid #ff0000;
+
+}
+margin:10px;
+padding: 10px;
+}

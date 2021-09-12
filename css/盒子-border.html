@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-type" content="text/html">
+        <title>盒子模型的border</title>
+    </head>
+    <body>
+        <div id="box">
+            <h2>会员登录</h2>
+            <form action="#">
+                <div>
+                    <span>用户名：</span>
+                    <input type="text">
+                </div>
+                <div>
+                    <span>密码</span>
+                    <input type="text">
+                </div>
+                <div>
+                    <span>邮箱</span>
+                    <input type="text">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+<style>
+    #box{
+        border:1px solid green;
+        width: 300px;
+        padding: 0 0 0 0;
+        margin: 0 auto;
+        background-color: orange;
+    }
+
+
+    div input:nth-of-type(1){
+        border:3px solid black;
+    }
+    div input:nth-of-type(2){
+        border:3px dashed rgb(82, 19, 19);
+    }
+</style>

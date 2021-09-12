@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .half-px{/*height为0.5px的直线时，浏览器会四舍五入为1px的直线 */
+            background-color: aqua;
+            height: 0.5px;
+        }
+        .half-px1{/*这个肯定对*/
+            background-color: aqua;
+            height: 1px;
+            transform: scale(0.5);/*使用缩放功能将直线缩放0.5倍*/
+        }
+        .half-px2{
+            background-color: aqua;
+            height: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div style=" height: 20px;"></div>
+    <div class="half-px"></div>
+    <div style=" height: 20px;"></div>
+    <div class="half-px1"></div>
+    <div style=" height: 20px;"></div>
+    <div class="half-px2"></div>
+    <div style="height: 20px;">实现不用border画出1px线</div>
+    <div  style="width:100%;height:1px;background-color:black"></div>
+</body>
+</html>

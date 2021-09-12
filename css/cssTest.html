@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+<body>
+    <p class="testP1">Hello HTML5</p>
+    <p>let us do css</p>
+    <p>test p </p>
+    <span>
+        <a>又一个a标签</a>
+        <p>div 的p标签</p>
+        <p>div 的第二个p标签</p>
+        <a href="www.baidu.com">点击跳转到百度</a>
+    </span>
+    <span >
+        <p class='spanp2'>asdasdasd</p>
+    </span>
+<a href="www.baidu.com">点击跳转到百度</a>
+</body>
+</html>
+<style>
+/*层次选择器
+body>p{
+    font-size:60px;
+    font-family:黑体;
+    text-align:center;
+    height:100px;
+    line-height:100px;
+    text-decoration:line-through;
+    vertical-align:middle;
+    
+}
+.testP{
+    font-size:100px;
+    background-color:red;
+}
+.testP1 + p{
+    font-size:100px;
+    background-color:red;
+}
+a{
+    text-decoration:none;
+    color:#000000;
+    text-shadow:green 10px 10px 2px;
+}
+a:hover{
+    color:ORANGE;
+}
+*/
+p:nth-child(2){
+    background-color:red;
+}
+div p:first-child{
+    font-size:30px;
+}
+body p:last-child{
+    text-decoration:overline;
+}
+.spanp2{
+    background-color:orange;
+}
+
+</style>
+
+

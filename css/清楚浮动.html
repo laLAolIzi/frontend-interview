@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+    .clearfix:after{	/*正常浏览器，清除浮动*/
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        background-color: red;
+    }
+
+</style>
+<body>
+<div id="box01" class="clearfix">
+    <div class="f-left"></div>
+    <div class="f-right"></div>
+</div>
+<div id="box02"></div>
+
+</head>
+
+</body>
+</html>
