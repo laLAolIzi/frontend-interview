@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,4 +23,42 @@
 </head>
 
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .container {      
+        /* overflow: hidden; */
+        background: red;
+      }
+      /* .container::after {
+          content: "";
+          display: block;
+          visibility: hidden;
+          clear: both;
+          overflow: hidden;
+      } */
+      .box1 {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+      .box2 {
+        float: right;
+        width: 400px;
+        height: 100px;
+        background: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div style="clear: both;">
+    </div>
+  </body>
 </html>
+

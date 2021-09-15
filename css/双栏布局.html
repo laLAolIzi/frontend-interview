@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>左侧固定右侧自适应</title>
+</head>
+<style>
+    /*方法1*/
+    /* 1、将左侧div浮动，右侧div设置margin-left */
+    .outer {
+        overflow: hidden;
+        border: 1px solid red;
+    }
+
+    .sidebar {
+        float: left;
+        width: 200px;
+        height: 150px;
+        background: #BCE8F1;
+    }
+
+    .content {
+        margin-left: 200px;
+        height: 100px;
+        background: #F0AD4E;
+    }
+
+    /*方法2*/
+    /* 2、固定区采用绝对定位，自适应区设置margin */
+    .outer2 {
+        position: relative;
+        height: 150px;
+        border: 1px solid red;
+    }
+
+    .sidebar2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        background: #BCE8F1;
+    }
+
+    .content2 {
+        margin-left: 200px;
+        height: 100px;
+        background: #F0AD4E;
+    }
+
+    /*方法3*/
+    /* table布局 */
+    .outer3 {
+        display: table;
+        width: 100%;
+        border: 1px solid red;
+    }
+
+    .sidebar3 {
+        display: table-cell;
+        width: 200px;
+        height: 150px;
+        background: #BCE8F1;
+    }
+
+    .content3 {
+        display: table-cell;
+        height: 100px;
+        background: #F0AD4E;
+    }
+
+    /*方法4*/
+    /* 双float + calc()计算属性 */
+    .outer4 {
+        overflow: hidden;
+        border: 1px solid red;
+    }
+
+    .sidebar4 {
+        float: left;
+        width: 200px;
+        height: 150px;
+        background: #BCE8F1;
+    }
+
+    .content4 {
+        float: left;
+        width: calc(100% - 200px);
+        height: 100px;
+        background: #F0AD4E;
+    }
+
+    /*方法5*/
+    /* float + BFC方法 */
+    .outer6 {
+        overflow: auto;
+        border: 1px solid red;
+    }
+
+    .sidebar6 {
+        float: left;
+        width: 200px;
+        height: 150px;
+        background: #BCE8F1;
+    }
+
+    .content6 {
+        overflow: auto;
+        height: 100px;
+        background: #F0AD4E;
+    }
+
+    /*方法6*/
+    /* flex */
+    .outer7 {
+        display: flex;
+        border: 1px solid red;
+    }
+
+    .sidebar7 {
+        flex: 0 0 200px;
+        /* width: 200px; */
+        height: 150px;
+        background: #BCE8F1;
+    }
+
+    .content7 {
+        flex: 1;
+        height: 100px;
+        background: #F0AD4E;
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="sidebar">固定宽度区(sideBar)</div>
+        <div class="content">自适应区(content)</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>
